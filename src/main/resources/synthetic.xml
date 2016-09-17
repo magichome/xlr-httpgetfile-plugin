@@ -1,0 +1,23 @@
+<!--
+
+    THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
+    FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
+
+-->
+<synthetic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://www.xebialabs.com/deployit/synthetic"
+           xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd">
+
+    <type type="http.GetFile" description="Retrieves the content of a file via HTTP GET.">
+        <!-- input -->
+        <property name="server"   category="input" required="true"  description="Host name of server to call."/>
+        <property name="username" category="input" required="false" description="Username if host requires authentication."/>
+        <property name="password" category="input" required="false" description="Password if host requires authentication." password="true"/>
+        <property name="uri" category="input" required="true" description="File uri to retrieve."/>
+
+        <!-- output variables -->
+        <property name="fileContent" category="variables" required="false" description="Content of the file."/>
+    </type>
+
+</synthetic>
