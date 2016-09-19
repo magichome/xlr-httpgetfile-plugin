@@ -9,7 +9,7 @@
            xmlns="http://www.xebialabs.com/deployit/synthetic"
            xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd">
 
-    <type type="http.GetFile" description="Retrieves the content of a file via HTTP GET.">
+    <type type="http.GetFile" extends="xlrelease.PythonScript" description="Retrieves the content of a file via HTTP GET.">
         <!-- input -->
         <property name="server"   category="input" required="true"  description="Host name of server to call."/>
         <property name="username" category="input" required="false" description="Username if host requires authentication."/>
@@ -17,7 +17,7 @@
         <property name="uri" category="input" required="true" description="File uri to retrieve."/>
 
         <!-- output variables -->
-        <property name="fileContent" category="variables" required="false" description="Content of the file."/>
+        <property name="fileContent" category="output" required="false" description="Content of the file."/>
     </type>
 
 </synthetic>
